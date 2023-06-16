@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+/*----------------------------------------
+  @use
+----------------------------------------*/
+@use "foundation/" as *;
+
+/*----------------------------------------
+	c-pager
+----------------------------------------*/
+.c-pager {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__prev {}
+
+  &__back {}
+
+  &__next {}
+}
+
+@include mq(sp) {}

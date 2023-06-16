@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+/*----------------------------------------
+	font
+----------------------------------------*/
+
+//単位「vw」を使用する際の基準となるブラウザ幅を指定
+$width: 375;
+
+@function vw($px) {
+  @return calc($px / $width) * 100vw;
+}
+
+@function rem($px) {
+  @return calc($px / 10) * 1rem;
+}
