@@ -1,0 +1,189 @@
+@charset "utf-8";
+
+/*----------------------------------------
+  @use
+----------------------------------------*/
+@use "foundation/" as *;
+
+/*----------------------------------------
+	c-detail
+----------------------------------------*/
+.c-detail {
+    margin: 100px 0 0;
+}
+
+@include mq(sp) {}
+
+/*----------------------------------------
+	c-detail-block
+----------------------------------------*/
+.c-detail-block {
+    margin: 100px 0 0;
+    padding: 40px;
+    background: #fafafa;
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #1DC291;
+        padding: 10px 15px;
+        &__title {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            img {
+                width: 50px;
+            }
+            h3 {
+                font-size: 3.2rem;
+                font-weight: 600;
+                color: #fff;
+            }
+        }
+        &__evaluation {
+            p {
+                display: flex;
+                align-items: center;
+                .text {
+                    white-space: nowrap;
+                    color: #fff;
+                }
+                img {
+
+                }
+                .num {
+                    font-size: 2.4rem;
+                    font-weight: 800;
+                    color: #fff;
+                }
+            }
+        }
+
+    }
+    &__main {
+        h4 {text-align: center;
+            margin: 10px 0 0;
+            font-size: 2.4rem;
+            font-weight: 600;
+        }
+        &__inner {
+            display: flex;
+            background: #fff;
+            padding: 20px;
+            margin: 50px 0 0;
+        }
+        &__text {
+            flex: 1;
+            margin: 0 20px 0 0;
+            h5 {
+                text-align: center;
+                border-top: 2px solid #FF6006;
+                border-bottom: 2px solid #FF6006;
+                padding: 5px 0;
+                font-size: 2rem;
+                font-weight: 800;
+                color: #FF6006;
+            }
+            ul {
+                margin: 30px 0 0;
+                li {
+                    position: relative;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    font-size: 1.6rem;
+                    font-weight: 600;
+                    line-height: 1.8;
+                    margin: 15px 0 0;
+                    &:first-child {
+                        margin: 0;
+                    }
+                    &::before{
+                        content: "";
+                        display: inline-block;
+                        background: url("../img/icon-list.svg") no-repeat center / cover;
+                        width: 25px;
+                        height: 25px;
+                        margin: 0 15px 0 0;
+                    }
+                }
+            }
+        }
+        &__img {
+            max-width: 370px;
+            width: 42%;
+        }
+    }
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        dl {
+            &:nth-child(even) {
+                dt {
+                    background: #CEEECD;
+                }
+            }
+            dt {
+                text-align: center;
+                padding: 20px;
+                background: #DCF1DB;
+            }
+            dd {
+                text-align: center;
+                background: #fff;
+                padding: 10px 20px;
+                &.text-left {
+                    text-align: left;
+                }
+            }
+        }
+    }
+    &__point {
+        margin: 20px 0 0;
+        h4 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            span {
+                background: #FAA001;
+                padding: 15px 50px 15px 30px;
+                border-left: 10px solid #FFCF40;
+                color: #fff;
+                clip-path: polygon(96% 0, 100% 50%, 96% 100%, 0 100%, 0 0);
+            }
+        }
+        &__inner {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background: #fff;
+        }
+        &__img {
+            width: 80px;
+            margin: 0 0 0 20px;
+        }
+        &__text {
+            flex: 1;
+            p {
+                font-size: 1.6rem;
+                line-height: 2;
+                color: #575245;
+            }
+            .accent {
+                font-weight: 600;
+                color: #FF6006;
+            }
+        }
+    }
+    &__button {
+        display: flex;
+        align-items: center;
+        &__detail {
+
+        }
+        &__official {
+            background: #FF6006;
+        }
+    }
+}
+
+@include mq(sp) {}

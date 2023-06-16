@@ -6,18 +6,9 @@
 @use "foundation/" as *;
 
 /*----------------------------------------
-	c-pager
+	c-title
 ----------------------------------------*/
-.c-pager {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  &__prev {}
-
-  &__back {}
-
-  &__next {}
+.c-title {
 }
 
 @include mq(sp) {}

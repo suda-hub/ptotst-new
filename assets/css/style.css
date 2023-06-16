@@ -469,6 +469,8 @@ button {
 ----------------------------------------*/
 .l-container {
   display: block;
+  max-width: 1000px;
+  margin: auto;
 }
 
 /*----------------------------------------
@@ -487,99 +489,14 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 50px;
+  max-width: 1000px;
+  margin: auto;
 }
 .l-header__logo a {
   display: block;
-  width: 100px;
-}
-.l-header__nav ul {
-  display: flex;
-}
-.l-header__nav ul a {
-  display: inline-block;
-  font-weight: bold;
-  padding: 20px;
-}
-.l-header__hum {
-  display: none;
+  width: 160px;
 }
 
-@media screen and (max-width: 767px) {
-  .l-header {
-    padding: 20px;
-  }
-  .l-header__logo {
-    position: relative;
-    z-index: 1;
-  }
-  .l-header__nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #aaa;
-    padding: 100px 20px 20px;
-    overflow-y: scroll;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease-in-out;
-    box-sizing: border-box;
-  }
-  .l-header__nav ul {
-    display: block;
-  }
-  .l-header__nav ul li {
-    text-align: center;
-  }
-  .l-header__hum {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 56px;
-    height: 56px;
-    border: 1px solid #ccc;
-    cursor: pointer;
-    z-index: 1;
-    box-sizing: border-box;
-  }
-  .l-header__hum div {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    width: 22px;
-    height: 16px;
-  }
-  .l-header__hum span {
-    display: block;
-    width: 100%;
-    height: 2px;
-    background: #000;
-    transition: 0.3s;
-  }
-  .l-header__hum p {
-    font-size: 1rem;
-    font-weight: bold;
-    line-height: 1;
-    margin: 8px 0 0;
-  }
-  .l-header.active .l-header__nav {
-    opacity: 1;
-    visibility: visible;
-  }
-  .l-header.active .l-header__hum span:nth-child(1) {
-    transform: translateY(7px) rotate(-45deg);
-  }
-  .l-header.active .l-header__hum span:nth-child(2) {
-    opacity: 0;
-  }
-  .l-header.active .l-header__hum span:nth-child(3) {
-    transform: translateY(-7px) rotate(45deg);
-  }
-}
 /*----------------------------------------
   @use
 ----------------------------------------*/
@@ -596,103 +513,285 @@ button {
 	index
 ----------------------------------------*/
 /*----------------------------------------
-	@use
+  @use
 ----------------------------------------*/
 /*----------------------------------------
-	c-breadcrumb
+	c-best3
 ----------------------------------------*/
-.c-breadcrumb {
-  max-width: 1000px;
-  padding: 10px 15px;
-  margin: 0 auto;
+.c-best3 {
+  margin: 100px 0 0;
 }
-.c-breadcrumb li {
+.c-best3__date {
+  text-align: center;
+  font-weight: bold;
+  margin: 0 0 20px;
+}
+.c-best3__date .text {
   position: relative;
-  display: inline;
-  font-size: 1.2rem;
-  list-style: none;
-  margin: 0 20px 0 0;
+  padding: 20px;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #575245;
 }
-.c-breadcrumb li:after {
-  content: ">";
+.c-best3__date .border-green::before {
+  content: "";
   position: absolute;
-  right: -18px;
+  background: #1DC291;
+  height: 2px;
+  width: 91px;
   top: 0;
+  left: 0;
+}
+.c-best3__date .border-green::after {
+  content: "";
+  position: absolute;
+  background: #1DC291;
+  height: 2px;
+  width: 91px;
   bottom: 0;
-  height: 20px;
+  right: 0;
+}
+.c-best3__date .border-orange::before {
+  content: "";
+  position: absolute;
+  background: #FAA001;
+  height: 2px;
+  width: 91px;
+  top: 0;
+  right: 0;
+}
+.c-best3__date .border-orange::after {
+  content: "";
+  position: absolute;
+  background: #FAA001;
+  height: 2px;
+  width: 91px;
+  bottom: 0;
+  left: 0;
+}
+.c-best3__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 3.2rem;
+  font-weight: 800;
+}
+.c-best3__title .head {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  background: #34A17A;
+  width: 64px;
+  height: 64px;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #fff;
+}
+.c-best3__title .accent {
+  color: #34A17A;
+}
+.c-best3__title .num {
+  color: #1DC291;
+}
+.c-best3__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  margin: 50px 0 0;
+}
+.c-best3__item {
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 25px;
+}
+.c-best3__item__num {
+  position: absolute;
+  top: -20px;
+  right: 0;
+  left: 0;
   margin: auto;
+  width: 40px;
 }
-.c-breadcrumb li:last-child:after {
-  content: none;
-}
-.c-breadcrumb a {
-  display: inline-block;
+.c-best3__item__button a {
+  display: block;
+  text-align: center;
+  background: #FF6006;
+  padding: 15px 0;
+  border-radius: 10px;
+  box-shadow: 0px 4px 0px #D34D13;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #fff;
 }
 
 /*----------------------------------------
   @use
 ----------------------------------------*/
 /*----------------------------------------
-	c-button
+	c-detail
 ----------------------------------------*/
+.c-detail {
+  margin: 100px 0 0;
+}
+
 /*----------------------------------------
-  @use
+	c-detail-block
 ----------------------------------------*/
-/*----------------------------------------
-	c-heading
-----------------------------------------*/
-/*----------------------------------------
-  @use
-----------------------------------------*/
-/*----------------------------------------
-	c-pager
-----------------------------------------*/
-.c-pager {
+.c-detail-block {
+  margin: 100px 0 0;
+  padding: 40px;
+  background: #fafafa;
+}
+.c-detail-block__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1DC291;
+  padding: 10px 15px;
+}
+.c-detail-block__head__title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.c-detail-block__head__title img {
+  width: 50px;
+}
+.c-detail-block__head__title h3 {
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: #fff;
+}
+.c-detail-block__head__evaluation p {
   display: flex;
   align-items: center;
-  justify-content: center;
 }
-/*----------------------------------------
-	@use
-----------------------------------------*/
-/*----------------------------------------
-	c-pagination
-----------------------------------------*/
-.c-pagination {
+.c-detail-block__head__evaluation p .text {
+  white-space: nowrap;
+  color: #fff;
+}
+.c-detail-block__head__evaluation p .num {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #fff;
+}
+.c-detail-block__main h4 {
+  text-align: center;
+  margin: 10px 0 0;
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+.c-detail-block__main__inner {
+  display: flex;
+  background: #fff;
+  padding: 20px;
+  margin: 50px 0 0;
+}
+.c-detail-block__main__text {
+  flex: 1;
+  margin: 0 20px 0 0;
+}
+.c-detail-block__main__text h5 {
+  text-align: center;
+  border-top: 2px solid #FF6006;
+  border-bottom: 2px solid #FF6006;
+  padding: 5px 0;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #FF6006;
+}
+.c-detail-block__main__text ul {
+  margin: 30px 0 0;
+}
+.c-detail-block__main__text ul li {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.8;
+  margin: 15px 0 0;
+}
+.c-detail-block__main__text ul li:first-child {
+  margin: 0;
+}
+.c-detail-block__main__text ul li::before {
+  content: "";
+  display: inline-block;
+  background: url("../img/icon-list.svg") no-repeat center/cover;
+  width: 25px;
+  height: 25px;
+  margin: 0 15px 0 0;
+}
+.c-detail-block__main__img {
+  max-width: 370px;
+  width: 42%;
+}
+.c-detail-block__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.c-detail-block__list dl:nth-child(even) dt {
+  background: #CEEECD;
+}
+.c-detail-block__list dl dt {
+  text-align: center;
+  padding: 20px;
+  background: #DCF1DB;
+}
+.c-detail-block__list dl dd {
+  text-align: center;
+  background: #fff;
+  padding: 10px 20px;
+}
+.c-detail-block__list dl dd.text-left {
+  text-align: left;
+}
+.c-detail-block__point {
+  margin: 20px 0 0;
+}
+.c-detail-block__point h4 {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.c-detail-block__point h4 span {
+  background: #FAA001;
+  padding: 15px 50px 15px 30px;
+  border-left: 10px solid #FFCF40;
+  color: #fff;
+  clip-path: polygon(96% 0, 100% 50%, 96% 100%, 0 100%, 0 0);
+}
+.c-detail-block__point__inner {
   display: flex;
   align-items: center;
-  justify-content: center;
+  padding: 20px;
+  background: #fff;
 }
-.c-pagination__prev a, .c-pagination__next a {
+.c-detail-block__point__img {
+  width: 80px;
+  margin: 0 0 0 20px;
+}
+.c-detail-block__point__text {
+  flex: 1;
+}
+.c-detail-block__point__text p {
+  font-size: 1.6rem;
+  line-height: 2;
+  color: #575245;
+}
+.c-detail-block__point__text .accent {
+  font-weight: 600;
+  color: #FF6006;
+}
+.c-detail-block__button {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border: 1px solid #333;
-  box-sizing: border-box;
 }
-.c-pagination__body {
-  display: flex;
-  margin: 0 20px;
-}
-.c-pagination__body li,
-.c-pagination__body a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.c-pagination__body li {
-  width: 40px;
-  height: 40px;
-  list-style: none;
-  margin: 0 5px;
-  border: 1px solid #333;
-  box-sizing: border-box;
-}
-.c-pagination__body a {
-  width: 100%;
-  height: 100%;
+.c-detail-block__button__official {
+  background: #FF6006;
 }
 
 /*----------------------------------------
@@ -701,16 +800,113 @@ button {
 /*----------------------------------------
 	c-title
 ----------------------------------------*/
-.c-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 200px;
-  font-size: 2rem;
-  font-weight: bold;
-  color: #fff;
-  background: #333;
+/*----------------------------------------
+  @use
+----------------------------------------*/
+/*----------------------------------------
+	c-popular
+----------------------------------------*/
+.c-popular {
+  margin: 80px 0 0;
 }
+.c-popular__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 60px;
+  margin: 40px 0 0;
+}
+.c-popular__table {
+  margin: 120px 0 0;
+  overflow-x: scroll;
+}
+.c-popular__table table {
+  width: 100%;
+}
+.c-popular__table table thead th {
+  min-width: 250px;
+  padding: 10px 20px;
+}
+.c-popular__table table thead th .num {
+  width: 40px;
+  margin: 0 auto 15px;
+}
+.c-popular__table table tbody tr th {
+  text-align: center;
+  background: #DCF1DB;
+  border: 1px solid #E8E7E7;
+  border-collapse: collapse;
+  vertical-align: middle;
+  padding: 30px;
+  white-space: nowrap;
+}
+.c-popular__table table tbody tr td {
+  text-align: center;
+  border: 1px solid #E8E7E7;
+  border-collapse: collapse;
+  vertical-align: middle;
+  padding: 10px;
+}
+.c-popular__table table tbody tr td.left-text {
+  text-align: left;
+}
+.c-popular__table table tbody tr td a {
+  font-weight: 600;
+  color: #34A17A;
+  text-decoration: underline;
+}
+.c-popular__point {
+  margin: 80px 0 0;
+}
+
+/*----------------------------------------
+  @use
+----------------------------------------*/
+/*----------------------------------------
+	c-title
+----------------------------------------*/
+/*----------------------------------------
+  @use
+----------------------------------------*/
+/*----------------------------------------
+	c-title
+----------------------------------------*/
+/*----------------------------------------
+  @use
+----------------------------------------*/
+/*----------------------------------------
+	c-title01
+----------------------------------------*/
+.c-title01 {
+  background: #34A27A;
+  padding: 15px;
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #fff;
+}
+/*----------------------------------------
+	c-title02
+----------------------------------------*/
+.c-title02 {
+  text-align: center;
+}
+.c-title02 .head {
+  padding: 10px 50px;
+  background: #FFCF40;
+  clip-path: polygon(6% 0, 100% 0%, 94% 100%, 0% 100%);
+  color: #575245;
+}
+.c-title02 .text {
+  display: inline-block;
+  margin: 15px 0 0;
+  font-size: 3.2rem;
+  font-weight: 800;
+  line-height: 1.3;
+  color: #575245;
+}
+.c-title02 .accent {
+  color: #34A17A;
+}
+
 /*----------------------------------------
 	index
 ----------------------------------------*/
@@ -767,15 +963,6 @@ button {
 ----------------------------------------*/
 /*----------------------------------------
 	p-front
-----------------------------------------*/
-/*----------------------------------------
-  @use
-----------------------------------------*/
-/*----------------------------------------
-	p-about
-----------------------------------------*/
-/*----------------------------------------
-	p-about
 ----------------------------------------*/
 /*----------------------------------------
 	index

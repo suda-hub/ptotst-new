@@ -1,0 +1,134 @@
+@charset "utf-8";
+
+/*----------------------------------------
+  @use
+----------------------------------------*/
+@use "foundation/" as *;
+
+/*----------------------------------------
+	c-best3
+----------------------------------------*/
+.c-best3 {
+    margin: 100px 0 0;
+    &__date {
+        text-align: center;
+        font-weight: bold;
+        margin: 0 0 20px;
+        .text {
+            position: relative;
+            padding: 20px;
+            font-size: 2rem;
+            font-weight: 800;
+            color: #575245;
+        }
+        .border-green {
+            &::before{
+                content: "";
+                position: absolute;
+                background: #1DC291;
+                height: 2px;
+                width: 91px;
+                top: 0;
+                left: 0;
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                background: #1DC291;
+                height: 2px;
+                width: 91px;
+                bottom: 0;
+                right: 0;
+            }
+        }
+        .border-orange {
+            &::before{
+                content: "";
+                position: absolute;
+                background: #FAA001;
+                height: 2px;
+                width: 91px;
+                top: 0;
+                right: 0;
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                background: #FAA001;
+                height: 2px;
+                width: 91px;
+                bottom: 0;
+                left: 0;
+            }
+        }
+    }
+    &__title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 3.2rem;
+        font-weight: 800;
+        .head {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100px;
+            background: #34A17A;
+            width: 64px;
+            height: 64px;
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #fff;
+        }
+        .text {
+        }
+        .accent {
+            color: #34A17A;
+        }
+        .num {
+            color: #1DC291;
+        }
+    }
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+        margin: 50px 0 0;
+    }
+    &__item {
+        position: relative;
+        border: 1px solid rgba(0,0,0,.2);
+        padding: 25px;
+        &__num {
+            position: absolute;
+            top: -20px;
+            right: 0;
+            left: 0;
+            margin: auto;
+            width: 40px;
+        }
+        &__img {
+
+        }
+        &__text {
+
+        }
+        &__button {
+            a{
+                display: block;
+                text-align: center;
+                background: #FF6006;
+                padding: 15px 0;
+                border-radius: 10px;
+                box-shadow: 0px 4px 0px #D34D13;
+                font-size: 1.6rem;
+                font-weight: 600;
+                color: #fff;
+            }
+        }
+    }
+
+}
+
+@include mq(sp) {}

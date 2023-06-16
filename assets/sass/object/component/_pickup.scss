@@ -6,8 +6,9 @@
 @use "foundation/" as *;
 
 /*----------------------------------------
-	c-heading
+	c-title
 ----------------------------------------*/
-.c-heading {}
+.c-title {
+}
 
 @include mq(sp) {}

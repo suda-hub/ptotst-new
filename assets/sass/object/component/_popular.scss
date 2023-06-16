@@ -1,0 +1,79 @@
+@charset "utf-8";
+
+/*----------------------------------------
+  @use
+----------------------------------------*/
+@use "foundation/" as *;
+
+/*----------------------------------------
+	c-popular
+----------------------------------------*/
+.c-popular {
+    margin: 80px 0 0;
+    &__title {
+
+    }
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 60px;
+        margin: 40px 0 0;
+    }
+    &__item {
+
+    }
+    &__table {
+        margin: 120px 0 0;
+        overflow-x: scroll;
+        table {
+            width: 100%;
+            thead {
+                th {
+                    min-width: 250px;
+                    padding: 10px 20px;
+                    .num {
+                        width: 40px;
+                        margin: 0 auto 15px;
+                    }
+                    .img{
+
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    th {
+                        text-align: center;
+                        background:  #DCF1DB;
+                        border: 1px solid #E8E7E7;
+                        border-collapse: collapse;
+                        vertical-align: middle;
+                        padding: 30px;
+                        white-space: nowrap;
+                    }
+                    td {
+                        text-align: center;
+                        border: 1px solid #E8E7E7;
+                        border-collapse: collapse;
+                        vertical-align: middle;
+                        padding: 10px;
+                        &.left-text {
+                            text-align: left;
+                        }
+                        a {
+                            font-weight: 600;
+                            color: #34A17A;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__point {
+        margin: 80px 0 0;
+
+    }
+}
+
+@include mq(sp) {}
