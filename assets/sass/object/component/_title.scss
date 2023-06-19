@@ -9,20 +9,73 @@
 	c-title01
 ----------------------------------------*/
 .c-title01 {
+  position: relative;
   background:  #34A27A;
-  padding: 15px;
+  padding: 15px 15px 15px 95px;
   font-size: 2.4rem;
   font-weight: 800;
   color: #fff;
+  &::before {
+    content: "";
+    position: absolute;
+    background: #1DC291;
+    box-shadow: 15px 0px 10px -5px #359773;
+    width: 65px;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
   &.-crown {
-    
+    &::after {
+      background: url(../img/icon-crown.svg) no-repeat center / cover;
+      width: 28px;
+      height: 18px;
+      left: 18px;
+    }
   }
   &.-point {
-
+    &::after {
+      background: url(../img/icon-osusume.svg) no-repeat center / cover;
+      width: 40px;
+      height: 40px;
+      left: 12px;
+    }
   }
 }
 
-@include mq(sp) {}
+@include mq(sp) {
+  .c-title01 {
+    padding: 15px 10px 15px 70px;
+    font-size: 1.7rem;
+    &::before {
+      width: 55px;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+    &.-crown {
+      &::after {
+        width: 24px;
+        height: 15px;
+        left: 15px;
+      }
+    }
+    &.-point {
+      &::after {
+        width: 35px;
+        height: 35px;
+        left: 10px;
+      }
+    }
+  }
+}
 /*----------------------------------------
 	c-title02
 ----------------------------------------*/
@@ -31,21 +84,30 @@
   .head {
     padding: 10px 50px;
     background: #FFCF40;
-    clip-path: polygon(6% 0, 100% 0%, 94% 100%, 0% 100%);
-    color: #575245;
+    font-size: 2.4rem;
+    font-weight: 800;
+    clip-path: polygon(5% 0, 100% 0%, 95% 100%, 0% 100%);
   }
   .text {
     display: inline-block;
-    margin: 15px 0 0;
+    margin: 20px 0 0;
     font-size: 3.2rem;
     font-weight: 800;
-    line-height: 1.3;
-    color: #575245;
-
   }
   .accent {
       color: #34A17A;
   }
 }
 
-@include mq(sp) {}
+@include mq(sp) {
+  .c-title02 {
+    .head {
+      padding: 10px 50px;
+      font-size: 1.6rem;
+    }
+    .text {
+      margin: 20px 0 0;
+      font-size: 1.8rem;
+    }
+  }
+}

@@ -6,9 +6,118 @@
 @use "foundation/" as *;
 
 /*----------------------------------------
-	c-title
+	c-prefectures
 ----------------------------------------*/
-.c-title {
+.c-prefectures {
+    margin: 120px 0 0;
+    &__content {
+        display: flex;
+        margin: 60px 0 0;
+        &__img {
+            position: relative;
+            width: 47%;
+        }
+        &__list {
+            li {
+                position: absolute;
+                a {
+                    background: #FAA001;
+                    padding: 5px;
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    color: #fff;
+                    &:hover {
+                        opacity: .9;
+                    }
+                }
+            }
+            .hokkaidou {
+                top: 8%;
+                right: 14%;
+            }
+            .touhoku {
+                top: 41%;
+                right: 22%;
+            }
+            .kitakantou {
+                top: 52%;
+                right: 23%;
+            }
+            .hokuetu-sinetu {
+                top: 25%;
+                right: 40%;
+            }
+            .syutoken {
+                top: 67%;
+                right: 34%;
+            }
+            .kansai {
+                top: 76%;
+                right: 55%;
+            }
+            .tyugoku {
+                top: 58%;
+                right: 65%;
+            }
+            .kyusyu {
+                top: 70%;
+                right: 82%;
+            }
+            .sikoku {
+                top: 86%;
+                right: 72%;
+            }
+            .okinawa {
+                top: 84%;
+                right: 16%;
+            }
+        }
+        &__text {
+            flex: 1;
+            margin: 0 0 0 60px;
+            dl {
+                display: flex;
+                margin: 25px 0 0;
+                &:first-child {
+                    margin: 0;
+                }
+                dt {
+                    color: #FF6006;
+                    border-right: 1px solid #FF6006;
+                    padding: 0 15px 0 0;
+                }
+                dd {
+                    flex: 1;
+                    ul {
+                        display: flex;
+                        flex-wrap: wrap;
+                        li {
+                            margin: 0 0 0 15px;
+                            a {
+                                font-size: 1.6rem;
+                                font-weight: 600;
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
-@include mq(sp) {}
+@include mq(sp) {
+    .c-prefectures {
+        margin: 100px 0 0;
+        &__content {
+            display: block;
+            margin: 30px 0 0;
+            &__img {
+                width: auto;
+            }
+            &__text {
+                margin: 30px 0 0;
+            }
+        }
+    }
+}

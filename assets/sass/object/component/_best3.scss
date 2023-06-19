@@ -16,10 +16,9 @@
         margin: 0 0 20px;
         .text {
             position: relative;
-            padding: 20px;
+            padding: 15px 0;
             font-size: 2rem;
             font-weight: 800;
-            color: #575245;
         }
         .border-green {
             &::before{
@@ -27,7 +26,7 @@
                 position: absolute;
                 background: #1DC291;
                 height: 2px;
-                width: 91px;
+                width: 48%;
                 top: 0;
                 left: 0;
             }
@@ -36,7 +35,7 @@
                 position: absolute;
                 background: #1DC291;
                 height: 2px;
-                width: 91px;
+                width: 48%;
                 bottom: 0;
                 right: 0;
             }
@@ -47,7 +46,7 @@
                 position: absolute;
                 background: #FAA001;
                 height: 2px;
-                width: 91px;
+                width: 48%;
                 top: 0;
                 right: 0;
             }
@@ -56,7 +55,7 @@
                 position: absolute;
                 background: #FAA001;
                 height: 2px;
-                width: 91px;
+                width: 48%;
                 bottom: 0;
                 left: 0;
             }
@@ -69,19 +68,40 @@
         text-align: center;
         font-size: 3.2rem;
         font-weight: 800;
+        margin: 30px 0 0;
+        &__inner {
+            position: relative;
+        }
         .head {
-            display: inline-flex;
+            position: absolute;
+            display: flex;
             justify-content: center;
             align-items: center;
             border-radius: 100px;
             background: #34A17A;
-            width: 64px;
-            height: 64px;
+            left: 0;
+            top: -10px;
+            width: 55px;
+            height: 55px;
+            padding: 0 0 0 2px;
             font-size: 1.6rem;
             font-weight: 800;
             color: #fff;
+            transform: rotate(-22deg);
+            &::before {
+                content: "";
+                position: absolute;
+                background: #34A17A;
+                width: 12px;
+                height: 10px;
+                right: 1px;
+                bottom: 1px;
+                transform: rotate(40deg);
+                clip-path: polygon(0 0, 0% 100%, 100% 50%);
+            }
         }
         .text {
+            padding: 0 0 0 65px;
         }
         .accent {
             color: #34A17A;
@@ -99,22 +119,28 @@
     &__item {
         position: relative;
         border: 1px solid rgba(0,0,0,.2);
-        padding: 25px;
+        padding: 35px 25px 25px;
         &__num {
             position: absolute;
-            top: -20px;
+            top: -25px;
             right: 0;
             left: 0;
             margin: auto;
             width: 40px;
         }
         &__img {
-
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 95px;
         }
         &__text {
-
+            margin: 25px 0 0;
+            font-size: 1.6rem;
+            font-weight: 600;
         }
         &__button {
+            margin: 20px 0 0;
             a{
                 display: block;
                 text-align: center;
@@ -131,4 +157,37 @@
 
 }
 
-@include mq(sp) {}
+@include mq(sp) {
+    .c-best3 {
+        margin: 80px 0 0;
+        &__date {
+            margin: 0 0 40px;
+            .text {
+                padding: 15px 0;
+                font-size: 1.6rem;
+            }
+        }
+        &__title {
+            font-size: 2rem;
+            .head {
+                left: -45px;
+                top: -20px;
+                min-width: 55px;
+                height: 55px;
+                font-size: 1.3rem;
+            }
+            .text {
+                padding: 0;
+            }
+        }
+        &__list {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+        &__item {
+            &__text {
+                font-size: 1.6rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+/*----------------------------------------
+  @use
+----------------------------------------*/
+@use "foundation/" as *;
+
+/*----------------------------------------
+	c-banners
+----------------------------------------*/
+.c-banners {
+    &.-modifier {
+        margin: 140px 0 0;
+    }
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding: 20px;
+        gap: 20px;
+    }
+    &__item {
+        a {
+            display: block;
+        }
+    }
+}
+
+@include mq(sp) {
+    .c-banners {
+        &.-modifier {
+            margin: 100px 0 0;
+        }
+        &__list {
+            display: grid;
+            grid-template-columns: 1fr;
+            padding: 20px;
+            gap: 20px;
+        }
+    }
+}
