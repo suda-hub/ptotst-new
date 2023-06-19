@@ -159,6 +159,7 @@
 
 @include mq(sp) {
     .c-best3 {
+        padding: 0 10px;
         margin: 80px 0 0;
         &__date {
             margin: 0 0 40px;
@@ -181,12 +182,25 @@
             }
         }
         &__list {
-            grid-template-columns: 1fr;
-            gap: 40px;
+            gap: 10px;
         }
         &__item {
+            padding: 30px 10px 15px;
+            &__num {
+                width: 35px;
+            }
+            &__img {
+                min-height: 45px;
+            }
             &__text {
-                font-size: 1.6rem;
+                margin: 10px 0 0;
+                font-size: 1.2rem;
+            }
+            &__button {
+                a{
+                    padding: 10px 0;
+                    font-size: 1.3rem;
+                }
             }
         }
     }

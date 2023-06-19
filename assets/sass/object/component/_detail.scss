@@ -197,10 +197,8 @@
         }
         &__text {
             flex: 1;
-            p {
-                font-size: 1.6rem;
-                line-height: 2;
-            }
+            font-size: 1.6rem;
+            line-height: 2;
             .accent {
                 font-weight: 600;
                 color: #FF6006;
@@ -258,7 +256,7 @@
                 align-items: center;
                 padding: 10px;
                 img {
-                    width: 40px;
+                    width: 55px;
                     margin: 0 10px 0 0;
                 }
                 h3 {
@@ -311,20 +309,15 @@
             }
         }
         &__list {
-            display: block;
             margin: 20px 0 0;
             dl {
-                display: flex;
-                flex-direction: column;
-                align-items : stretch;
-                width: auto;
                 dt {
-                    padding: 20px 10px;
-                    font-size: 1.4rem;
+                    padding: 10px;
+                    font-size: 1.2rem;
                 }
                 dd {
-                    padding: 20px 10px;
-                    font-size: 1.4rem;
+                    padding: 10px;
+                    font-size: 1.2rem;
                 }
             }
         }
@@ -337,18 +330,17 @@
                 }
             }
             &__inner {
-                flex-direction: column-reverse;
-                padding: 20px 30px;
+                display: block;
+                padding: 20px;
                 margin: 5px 0 0;
             }
             &__text {
                 margin: 10px 0 0;
-                p {
-                    font-size: 1.4rem;
-                }
+                font-size: 1.4rem;
             }
             &__img {
-                width: 80px;
+                float: right;
+                width: 65px;
             }
         }
         &__button {

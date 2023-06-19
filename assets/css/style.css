@@ -478,7 +478,7 @@ button {
 
 @media screen and (max-width: 767px) {
   .l-container {
-    padding: 0 20px;
+    padding: 0;
   }
 }
 /*----------------------------------------
@@ -714,6 +714,7 @@ button {
 
 @media screen and (max-width: 767px) {
   .c-best3 {
+    padding: 0 10px;
     margin: 80px 0 0;
   }
   .c-best3__date {
@@ -737,11 +738,24 @@ button {
     padding: 0;
   }
   .c-best3__list {
-    grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 10px;
+  }
+  .c-best3__item {
+    padding: 30px 10px 15px;
+  }
+  .c-best3__item__num {
+    width: 35px;
+  }
+  .c-best3__item__img {
+    min-height: 45px;
   }
   .c-best3__item__text {
-    font-size: 1.6rem;
+    margin: 10px 0 0;
+    font-size: 1.2rem;
+  }
+  .c-best3__item__button a {
+    padding: 10px 0;
+    font-size: 1.3rem;
   }
 }
 /*----------------------------------------
@@ -935,8 +949,6 @@ button {
 }
 .c-detail-block__point__text {
   flex: 1;
-}
-.c-detail-block__point__text p {
   font-size: 1.6rem;
   line-height: 2;
 }
@@ -993,7 +1005,7 @@ button {
     padding: 10px;
   }
   .c-detail-block__head__title img {
-    width: 40px;
+    width: 55px;
     margin: 0 10px 0 0;
   }
   .c-detail-block__head__title h3 {
@@ -1040,22 +1052,15 @@ button {
     width: auto;
   }
   .c-detail-block__list {
-    display: block;
     margin: 20px 0 0;
   }
-  .c-detail-block__list dl {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    width: auto;
-  }
   .c-detail-block__list dl dt {
-    padding: 20px 10px;
-    font-size: 1.4rem;
+    padding: 10px;
+    font-size: 1.2rem;
   }
   .c-detail-block__list dl dd {
-    padding: 20px 10px;
-    font-size: 1.4rem;
+    padding: 10px;
+    font-size: 1.2rem;
   }
   .c-detail-block__point {
     margin: 20px 0 0;
@@ -1067,18 +1072,17 @@ button {
     padding: 10px 20px 10px 10px;
   }
   .c-detail-block__point__inner {
-    flex-direction: column-reverse;
-    padding: 20px 30px;
+    display: block;
+    padding: 20px;
     margin: 5px 0 0;
   }
   .c-detail-block__point__text {
     margin: 10px 0 0;
-  }
-  .c-detail-block__point__text p {
     font-size: 1.4rem;
   }
   .c-detail-block__point__img {
-    width: 80px;
+    float: right;
+    width: 65px;
   }
   .c-detail-block__button {
     grid-template-columns: 1fr;
@@ -1145,25 +1149,29 @@ button {
 
 @media screen and (max-width: 767px) {
   .c-pickup {
-    margin: 115px 0 0;
+    padding: 0 10px;
+    margin: 100px 0 0;
   }
   .c-pickup__list {
-    grid-template-columns: 1fr;
+    gap: 10px;
     margin: 20px 0 0;
   }
   .c-pickup__item {
-    padding: 20px;
+    padding: 20px 10px;
   }
   .c-pickup__item__title {
-    font-size: 2rem;
+    font-size: 1.4rem;
+  }
+  .c-pickup__item__text {
+    font-size: 1.3rem;
   }
   .c-pickup__item__button {
-    margin: 30px 0 0;
+    margin: 20px 0 0;
   }
   .c-pickup__item__button a {
     width: auto;
-    height: 65px;
-    font-size: 1.8rem;
+    height: 50px;
+    font-size: 1.3rem;
   }
 }
 /*----------------------------------------
@@ -1245,14 +1253,15 @@ button {
 
 @media screen and (max-width: 767px) {
   .c-popular {
+    padding: 0 10px;
     margin: 80px 0 0;
   }
   .c-popular__list {
-    grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 5px;
+    margin: 20px 0;
   }
   .c-popular__table {
-    margin: 80px 0 0;
+    margin: 60px 0 0;
   }
   .c-popular__table table thead th {
     min-width: 150px;
@@ -1385,10 +1394,12 @@ button {
 
 @media screen and (max-width: 767px) {
   .c-prefectures {
+    padding: 0 10px;
     margin: 100px 0 0;
   }
   .c-prefectures__content {
     display: block;
+    padding: 0 10px;
     margin: 30px 0 0;
   }
   .c-prefectures__content__img {
@@ -1396,6 +1407,12 @@ button {
   }
   .c-prefectures__content__text {
     margin: 30px 0 0;
+  }
+  .c-prefectures__content__text dl dt {
+    font-size: 1.4rem;
+  }
+  .c-prefectures__content__text dl dd ul li a {
+    font-size: 1.4rem;
   }
 }
 /*----------------------------------------
@@ -1571,6 +1588,9 @@ button {
 }
 
 @media screen and (max-width: 767px) {
+  .c-search {
+    padding: 0 10px;
+  }
   .c-search__form {
     margin: 30px 0 0;
   }
@@ -1630,14 +1650,18 @@ button {
 }
 
 @media screen and (max-width: 767px) {
+  .c-banners {
+    padding: 0 10px;
+    margin: 20px 0 0;
+  }
   .c-banners.-modifier {
     margin: 100px 0 0;
   }
   .c-banners__list {
     display: grid;
-    grid-template-columns: 1fr;
-    padding: 20px;
-    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px 0;
+    gap: 10px;
   }
 }
 /*----------------------------------------

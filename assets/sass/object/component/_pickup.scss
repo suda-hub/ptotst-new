@@ -53,22 +53,26 @@
 
 @include mq(sp) {
     .c-pickup {
-        margin: 115px 0 0;
+        padding: 0 10px;
+        margin: 100px 0 0;
         &__list {
-            grid-template-columns: 1fr;
+            gap: 10px;
             margin: 20px 0 0;
         }
         &__item {
-            padding: 20px;
+            padding: 20px 10px;
             &__title {
-                font-size: 2rem;
+                font-size: 1.4rem;
+            }
+            &__text {
+                font-size: 1.3rem;
             }
             &__button {
-                margin: 30px 0 0;
+                margin: 20px 0 0;
                 a {
                     width: auto;
-                    height: 65px;
-                    font-size: 1.8rem;
+                    height: 50px;
+                    font-size: 1.3rem;
                 }
             }
         }
