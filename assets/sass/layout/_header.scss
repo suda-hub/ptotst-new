@@ -9,11 +9,16 @@
 	l-header
 ----------------------------------------*/
 .l-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1000px;
-  margin: auto;
+  &.-page {
+    border-bottom: 2px solid #34a17a;
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: auto;
+  }
   &__logo {
     a {
       display: block;
