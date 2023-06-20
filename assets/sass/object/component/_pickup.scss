@@ -9,7 +9,9 @@
 	c-pickup
 ----------------------------------------*/
 .c-pickup {
-    margin: 115px 0 0;
+    max-width: 1000px;
+    box-sizing: content-box;
+    margin: 115px auto 0;
     &__list {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -23,7 +25,9 @@
             text-align: center;
             font-size: 2.4rem;
             font-weight: 800;
-            color: #34A17A;
+            a {
+                color: #34A17A;
+            }
         }
         &__img {
             margin: 20px 0 0;

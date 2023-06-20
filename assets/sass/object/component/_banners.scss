@@ -9,8 +9,12 @@
 	c-banners
 ----------------------------------------*/
 .c-banners {
+    box-sizing: content-box;
+    max-width: 1000px;
+    padding: 0 50px;
+    margin: auto;
     &.-modifier {
-        margin: 140px 0 0;
+        margin: 140px auto 0;
     }
     &__list {
         display: grid;

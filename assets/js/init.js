@@ -1,26 +1,7 @@
 $(function(){
-
-	/** 
-	 * 共通パーツ
-	 * スマホメニュー
-	 */
-	navigation();
-
-	/** 
-	 * 共通パーツ
-	 * スムーススクロール
-	 */
-	// smoothscroll();
+	// スムーススクロール
+	smoothscroll();
 });
-
-const navigation = () => {
-	const head = $('.js-header'),
-	menu = $('.js-header-menu');
-
-	menu.on('click',function(){
-		head.toggleClass('active');
-	});
-}
 
 const smoothscroll = () => {
 	$('a[href^="#"]').click(function(){

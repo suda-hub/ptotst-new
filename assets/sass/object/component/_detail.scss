@@ -9,10 +9,17 @@
 	c-detail
 ----------------------------------------*/
 .c-detail {
-    margin: 100px 0 0;
+    box-sizing: content-box;
+    max-width: 1000px;
+	padding: 0 50px;
+    margin: 100px auto 0;
 }
 
-@include mq(sp) {}
+@include mq(sp) {
+    .c-detail {
+        padding: 0 10px;
+    }
+}
 
 /*----------------------------------------
 	c-detail-block
@@ -48,10 +55,12 @@
                 width: 65px;
                 margin: 0 20px 0 0;
             }
-            h3 {
+            .text {
                 font-size: 3.2rem;
                 font-weight: 600;
-                color: #fff;
+                a {
+                    color: #fff;
+                }
             }
         }
         &__evaluation {
@@ -76,7 +85,6 @@
                 }
             }
         }
-
     }
     &__main {
         h4 {text-align: center;

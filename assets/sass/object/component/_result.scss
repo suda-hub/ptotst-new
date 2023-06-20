@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+/*----------------------------------------
+  @use
+----------------------------------------*/
+@use "foundation/" as *;
+
+/*----------------------------------------
+	c-result
+----------------------------------------*/
+.c-result {
+    background: #575245;
+    padding: 0 50px;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1000px;
+        margin: auto;
+    }
+    &__text {
+        display: flex;
+        align-items: center;
+        font-size: 1.2rem;
+        font-weight: 300;
+        color: #fff;
+        span {
+            display: inline-block;
+            padding: 0 0 0 5px;
+            font-size: 2rem;
+            font-weight: 800;
+            color: #FF6006;
+        }
+    }
+    &__select {
+        position: relative;
+        padding: 7px 0;
+        min-width: 410px;
+        &::before {
+            content: "";
+            position: absolute;
+            background: #34A17A;
+            width: 12px;
+            height: 8px;
+            right: 20px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            clip-path: polygon(0 0, 50% 100%, 100% 0);
+            z-index: 1;
+        }
+        select {
+            background: #fff;
+            border-radius: 4px;
+            width: 100%;
+            padding: 15px;
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #1DC291;
+            cursor: pointer;
+        }
+    }
+}
+
+@include mq(sp) {
+}

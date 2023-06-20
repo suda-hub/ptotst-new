@@ -9,7 +9,10 @@
 	c-best3
 ----------------------------------------*/
 .c-best3 {
-    margin: 100px 0 0;
+    box-sizing: content-box;
+    max-width: 1000px;
+	padding: 0 50px;
+    margin: 100px auto 0;
     &__date {
         text-align: center;
         font-weight: bold;

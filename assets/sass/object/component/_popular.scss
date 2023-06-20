@@ -9,7 +9,9 @@
 	c-popular
 ----------------------------------------*/
 .c-popular {
-    margin: 80px 0 0;
+    max-width: 1000px;
+    box-sizing: content-box;
+    margin: 80px auto 0;
     &__list {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;

@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+/*----------------------------------------
+  @use
+----------------------------------------*/
+@use "foundation/" as *;
+
+/*----------------------------------------
+	c-breadcrumb
+----------------------------------------*/
+.c-breadcrumb {
+    background: #1DC291;
+    padding: 10px 50px;
+    &__list {
+        display: flex;
+        align-items: center;
+        max-width: 1000px;
+        margin: auto;
+        li {
+            padding: 0 5px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #fff;
+            &:first-child {
+                margin: 0 0 0 -5px;
+            }
+            &:last-child {
+                color: #575245;
+            }
+            a {
+                color: #fff;
+            }
+            span {
+                font-size: 1.6rem;
+            }
+        }
+    }
+}
+
+@include mq(sp) {
+}

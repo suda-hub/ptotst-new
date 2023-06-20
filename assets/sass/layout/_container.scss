@@ -10,14 +10,7 @@
 ----------------------------------------*/
 .l-container {
 	display: block;
-	box-sizing: content-box;
-	max-width: 1000px;
-	margin: auto;
-	padding: 0 50px;
 }
 
 @include mq(sp) {
-	.l-container {
-		padding: 0;
-	}
 }
