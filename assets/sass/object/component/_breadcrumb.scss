@@ -10,6 +10,7 @@
 ----------------------------------------*/
 .c-breadcrumb {
     background: #1DC291;
+    border-top: 2px solid #34A17A;
     padding: 10px 50px;
     &__list {
         display: flex;
@@ -38,4 +39,12 @@
 }
 
 @include mq(sp) {
+    .c-breadcrumb {
+        padding: 10px;
+        &__list {
+            li {
+                padding: 0 3px;
+            }
+        }
+    }
 }

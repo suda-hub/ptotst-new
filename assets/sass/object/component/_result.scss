@@ -58,9 +58,36 @@
             font-weight: 600;
             color: #1DC291;
             cursor: pointer;
+            outline: none;
         }
     }
 }
 
 @include mq(sp) {
+    .c-result {
+        padding: 10px;
+        &__text {
+            font-size: 1.2rem;
+            margin: 0 20px 0 0;
+            span {
+                font-size: 2rem;
+            }
+        }
+        &__select {
+            flex: 1;
+            min-width: auto;
+            width: 100%;
+            padding: 0;
+            &::before {
+                width: 12px;
+                height: 8px;
+                right: 10px;
+            }
+            select {
+                width: 100%;
+                padding: 10px;
+                font-size: 1.6rem;
+            }
+        }
+    }
 }

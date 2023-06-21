@@ -9,8 +9,11 @@
 	p-page
 ----------------------------------------*/
 .p-page {
+	box-sizing: content-box;
 	background: #dcf1db;
-	padding: 40px 0;
+	max-width: 1000px;
+	margin: 0 auto 80px;
+	padding: 40px 50px;
 	&__head {
 		font-size: 3rem;
 		font-weight: 800;

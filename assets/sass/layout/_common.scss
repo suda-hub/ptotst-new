@@ -55,4 +55,14 @@ button {
 	color: #575245;
 }
 
+.red-text {
+	color: #ff0000;
+}
+.bold {
+	font-weight: bold;
+}
+.bg-y {
+	background: #FFFF54;
+}
+
 @include mq(sp) {}
