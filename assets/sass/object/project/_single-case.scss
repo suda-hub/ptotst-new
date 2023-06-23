@@ -317,6 +317,9 @@
         &__table {
             background: #FFF4DB;
             padding: 20px;
+            &.-comment {
+                padding: 0 20px 20px;
+            }
             &.-one-column {
                 table {
                     thead {
@@ -454,6 +457,7 @@
                     }
                 }
                 &.-comment {
+                    padding: 0 10px 10px;
                     table {
                         tbody {
                             tr {

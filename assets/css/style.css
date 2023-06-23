@@ -2786,6 +2786,9 @@ button {
   background: #FFF4DB;
   padding: 20px;
 }
+.p-single-case-story__block__table.-comment {
+  padding: 0 20px 20px;
+}
 .p-single-case-story__block__table.-one-column table thead tr th:first-child {
   background: #ffcf40;
   border-bottom: 2px solid #fff4db;
@@ -2867,6 +2870,9 @@ button {
   }
   .p-single-case-story__block__table.-two-column table tbody tr td {
     width: 40%;
+  }
+  .p-single-case-story__block__table.-comment {
+    padding: 0 10px 10px;
   }
   .p-single-case-story__block__table.-comment table tbody tr th {
     min-width: auto;
