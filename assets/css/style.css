@@ -2522,6 +2522,20 @@ button {
 .p-single-case p + p {
   margin: 20px 0 0;
 }
+.p-single-case blockquote {
+  text-align: right;
+  margin: 20px 0 0;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #99927E;
+}
+.p-single-case blockquote cite {
+  font-style: normal;
+}
+.p-single-case blockquote cite a {
+  text-decoration: underline;
+  color: #34A17A;
+}
 
 @media screen and (max-width: 767px) {
   .p-single-case {
@@ -2541,6 +2555,17 @@ button {
     bottom: -11px;
   }
   .p-single-case__title span {
+    color: #34A17A;
+  }
+  .p-single-case blockquote {
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+  .p-single-case blockquote cite {
+    font-style: normal;
+  }
+  .p-single-case blockquote cite a {
+    text-decoration: underline;
     color: #34A17A;
   }
 }
@@ -2564,7 +2589,7 @@ button {
   background: #fff;
   width: 25px;
   height: 100%;
-  right: 0;
+  right: -0.5px;
   top: 0;
   clip-path: polygon(0 0, 100% 100%, 100% 0);
 }
@@ -2600,6 +2625,7 @@ button {
   color: #fff;
 }
 .p-single-case-ol__item dl dd {
+  flex: 1;
   padding: 0 10px;
   font-size: 2rem;
   font-weight: 600;
@@ -2689,20 +2715,6 @@ button {
   padding: 20px;
   margin: 20px 0 0;
 }
-.p-single-case-strength__content blockquote {
-  text-align: right;
-  margin: 20px 0 0;
-  font-size: 1.2rem;
-  font-weight: 300;
-  color: #99927E;
-}
-.p-single-case-strength__content blockquote cite {
-  font-style: normal;
-}
-.p-single-case-strength__content blockquote cite a {
-  text-decoration: underline;
-  color: #34A17A;
-}
 
 @media screen and (max-width: 767px) {
   .p-single-case-strength {
@@ -2737,17 +2749,6 @@ button {
   .p-single-case-strength__content__img figcaption {
     text-align: right;
     margin: 20px 0 0;
-  }
-  .p-single-case-strength__content__img figcaption blockquote {
-    font-size: 1.2rem;
-    font-weight: 300;
-  }
-  .p-single-case-strength__content__img figcaption blockquote cite {
-    font-style: normal;
-  }
-  .p-single-case-strength__content__img figcaption blockquote cite a {
-    text-decoration: underline;
-    color: #34A17A;
   }
 }
 /*----------------------------------------
@@ -2785,8 +2786,37 @@ button {
   background: #FFF4DB;
   padding: 20px;
 }
+.p-single-case-story__block__table.-one-column table thead tr th:first-child {
+  background: #ffcf40;
+  border-bottom: 2px solid #fff4db;
+}
+.p-single-case-story__block__table.-one-column table tbody tr th {
+  min-width: 200px;
+  width: 50%;
+}
+.p-single-case-story__block__table.-one-column table tbody tr td {
+  text-align: center;
+}
+.p-single-case-story__block__table.-two-column table tbody tr td {
+  text-align: center;
+  border-right: 2px solid #FFF4DB;
+  width: 40%;
+}
+.p-single-case-story__block__table.-two-column table tbody tr td:last-child {
+  border: 0;
+}
 .p-single-case-story__block__table table {
   width: 100%;
+}
+.p-single-case-story__block__table table thead tr th {
+  text-align: center;
+  background: #ffcf40;
+  border-right: 2px solid #fff4db;
+  padding: 15px;
+}
+.p-single-case-story__block__table table thead tr th:first-child {
+  background: none;
+  border: 0;
 }
 .p-single-case-story__block__table table tbody tr {
   border-top: 2px solid #FFF4DB;
@@ -2799,6 +2829,7 @@ button {
   background: #34A17A;
   vertical-align: middle;
   padding: 15px;
+  width: 20%;
   font-size: 1.6rem;
   font-weight: 600;
   color: #fff;
@@ -2808,6 +2839,10 @@ button {
   padding: 15px;
   font-size: 1.6rem;
   font-weight: 600;
+}
+.p-single-case-story__block__table table tbody tr td ul li {
+  padding: 0 0 0 1em;
+  text-indent: -1em;
 }
 
 @media screen and (max-width: 767px) {
@@ -2819,13 +2854,41 @@ button {
     padding: 10px 0 10px 15px;
     font-size: 1.8rem;
   }
+  .p-single-case-story__block__table {
+    padding: 10px;
+  }
+  .p-single-case-story__block__table.-one-column table tbody tr th {
+    min-width: 150px;
+    width: 50%;
+  }
+  .p-single-case-story__block__table.-two-column table tbody tr th {
+    min-width: auto;
+    width: 25%;
+  }
+  .p-single-case-story__block__table.-two-column table tbody tr td {
+    width: 40%;
+  }
+  .p-single-case-story__block__table.-comment table tbody tr th {
+    min-width: auto;
+    width: 25%;
+  }
+  .p-single-case-story__block__table.-comment table tbody tr td {
+    width: auto;
+  }
+  .p-single-case-story__block__table table thead tr th {
+    padding: 10px;
+    font-size: 1.4rem;
+  }
   .p-single-case-story__block__table table tbody tr th {
     min-width: 37.3333333333vw;
+    font-size: 1.4rem;
+    padding: 10px 5px;
   }
   .p-single-case-story__block__table table tbody tr td {
     vertical-align: middle;
     background: #fff;
-    padding: 10px 15px;
+    padding: 10px;
+    font-size: 1.4rem;
   }
 }
 /*----------------------------------------
@@ -2925,6 +2988,12 @@ button {
 .p-single-case-company__table table tbody tr td {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding: 20px;
+}
+.p-single-case-company__table table tbody tr td .note {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #99927E;
 }
 
 @media screen and (max-width: 767px) {
