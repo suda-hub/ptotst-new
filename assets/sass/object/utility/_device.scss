@@ -3,35 +3,22 @@
 /*----------------------------------------
 	@use
 ----------------------------------------*/
-@use "foundation/" as *;
+@use "../../foundation/mixin/mediaquery";
 
 /*----------------------------------------
 	u-device-sp
 ----------------------------------------*/
-.u-device-sp {
+.u-device-sp{
 	display: none;
-
-	@include mq(pc) {
+	@include mediaquery.sp {
 		display: block;
 	}
 }
-
-/*----------------------------------------
-	u-device-tablet
-----------------------------------------*/
-.u-device-tablet {
-	display: none;
-
-	@include mq(tl) {
-		display: block;
-	}
-}
-
 /*----------------------------------------
 	u-device-pc
 ----------------------------------------*/
-.u-device-pc {
-	@include mq(sp) {
+.u-device-pc{
+	@include mediaquery.sp {
 		display: none;
 	}
 }

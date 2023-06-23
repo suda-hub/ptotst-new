@@ -1,15 +1,26 @@
 @charset "utf-8";
 
 /*----------------------------------------
-	@use
+    @use
 ----------------------------------------*/
 @use "../../foundation/mixin/mediaquery";
-	
-/*----------------------------------------
-	u-animation
-----------------------------------------*/
-.u-animation{
 
+/*----------------------------------------
+	c-pager
+----------------------------------------*/
+.c-pager{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    &__prev{
+
+    }
+    &__back{
+    	
+    }
+    &__next{
+    	
+    }
 }
 @include mediaquery.sp {
 	

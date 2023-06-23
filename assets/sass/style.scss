@@ -1,18 +1,33 @@
 @charset "UTF-8";
 
 //-------------------------------------------
+// Foundation
+//-------------------------------------------
+@use "foundation/base/reset";
+@use "foundation/base/webFont";
+@use "foundation/base/fontSize";
+//-------------------------------------------
 // Layout
 //-------------------------------------------
-@use "layout";
+@use "layout/common";
+@use "layout/header";
+@use "layout/footer";
+@use "layout/sidebar";
+@use "layout/nav";
 //-------------------------------------------
 // Object / component
 //-------------------------------------------
-@use "object/component";
+@use "object/component/breadcrumb";
+@use "object/component/pagination";
+@use "object/component/pager";
+@use "object/component/hero";
 //-------------------------------------------
 // Object / utility
 //-------------------------------------------
-@use "object/utility";
+@use "object/utility/device";
+@use "object/utility/animation";
 //-------------------------------------------
 // Object / project
 //-------------------------------------------
-@use "object/project";
+@use "object/project/front";
+@use "object/project/about";

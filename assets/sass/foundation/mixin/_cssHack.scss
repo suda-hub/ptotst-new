@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+// ----------------------------------------------------------------------
+// css hack
+// ----------------------------------------------------------------------
+
+@mixin hack-ie11 {
+	@at-root{
+		@media all and (-ms-high-contrast:none) {
+		    *::-ms-backdrop, & {
+		        @content;
+		    }
+		}
+	}
+}
+
+@mixin hack-edge {
+	@at-root{
+		@supports (-ms-ime-align:auto){
+	        @content;
+		}
+	}
+}
+
+@mixin hack-chrome {
+	@at-root{
+		@media screen and (-webkit-min-device-pixel-ratio:0){
+	        @content;
+		}
+	}
+}
+
+@mixin hack-firefox {
+	@at-root{
+		@-moz-document url-prefix(){
+	        @content;
+		}
+	}
+}
+
+@mixin hack-safari {
+	@at-root{
+		_::-webkit-full-page-media, _:future, :root &{
+	        @content;
+		}
+	}
+}
+
